@@ -1,28 +1,51 @@
 <template>
- <section class="form">
-            <div class="container">
-                <div class="titulo">
-                    <h1>FALE CONOSCO</h1>
-                    <p><b>Deixe sua mensagem abaixo:</b></p>
-                </div>
-
-                <div class="formulario">
-                        <label>Nome:</label>
-                        <input type="text" placeholder="Digite o seu nome:">
-                        <label>Email:</label>
-                        <input type="email" placeholder="Digite o seu email:">
-                        <label>Telefone</label>
-                        <input type="tel" placeholder="Digite seu número">
-                        <label>Mensagem:</label>
-                        <textarea placeholder="Digite a sua mensagem:" rows="6"></textarea>
-                        <button type="submit" onclick="recarregarPagContato()">Enviar mensagem</button>
-                </div>
-            </div>
-        </section> 
-</template>
-
-<script>
-export default {
-    name: 'FaleConosco',
-}
-</script>
+    <section class="bg-white p-8 text-center">
+      <h2 class="font-bold text-lg">FALE CONOSCO</h2>
+      <p class="mb-6">Deixe sua mensagem abaixo:</p>
+      <form class="max-w-md mx-auto space-y-4">
+        <div>
+          <label>Nome:</label>
+          <input v-model="form.name" type="text" class="input" placeholder="Digite o seu nome" />
+        </div>
+        <div>
+          <label>Email:</label>
+          <input v-model="form.email" type="email" class="input" placeholder="Digite o seu email" />
+        </div>
+        <div>
+          <label>Telefone:</label>
+          <input v-model="form.phone" type="text" class="input" placeholder="Digite seu número" />
+        </div>
+        <div>
+          <label>Mensagem:</label>
+          <textarea v-model="form.message" class="input" placeholder="Digite a sua mensagem"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar mensagem</button>
+      </form>
+    </section>
+  </template>
+  
+  <script>
+  export default {
+    name: 'ContactForm',
+    data() {
+      return {
+        form: {
+          name: '',
+          email: '',
+          phone: '',
+          message: ''
+        }
+      };
+    }
+  }
+  </script>
+  
+  <style scoped>
+  .input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  </style>
+  

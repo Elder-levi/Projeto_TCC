@@ -5,11 +5,10 @@
     <BarraNavegacao/>
 
   </header>
-  <main>
+ 
 
    <Contatos/>
 
-  </main>
   <footer>
     <final/>
   </footer>  
@@ -50,12 +49,6 @@ margin: 0;
 padding: 0;
 block-size: none;
 }
- main{
-  margin: 0%;
-  position: fixed;
-  left: 21%;
-  top: 4.5em ;
- }
  footer{
   position: fixed;
   left: 0%;

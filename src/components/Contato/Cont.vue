@@ -1,131 +1,67 @@
 <template>
-       <section class="contato">
-            <div class="container">
-                <h1>NOSSOS CONTATOS</h1>
-                <div class="informacoes">
-                    <div class="email">
-                        <i class="bi bi-envelope"></i>
-                        <h3>Email:</h3>
-                        <p>Email para doações:</p>
-                        <p class="emails">doacoesaaic@gmail.com</p>
-                        <br>
-                        <p>Email para assuntos de Marketing e Parcerias:</p>
-                        <p class="emails">marketingaaic@gmail.com</p>
-                        <br>
-                        <p>Outros assuntos:</p>
-                        <p class="emails">aaic@gmail.com</p>
-                    </div>
+    <section class="bg-blue-600 text-white p-8 text-center">
+      <h2 class="font-bold text-xl mb-6">NOSSOS CONTATOS</h2>
+      <div class="flex flex-col md:flex-row justify-around gap-6">
+        <div>
+          <p class="text-2xl mb-2">📧</p>
+          <p><strong>Email:</strong></p>
+          <p>doacoessocialc@gmail.com</p>
+          <p>marketingoalec@gmail.com</p>
+          <p>oalec@gmail.com</p>
+        </div>
+        <div>
+          <p class="text-2xl mb-2">📞</p>
+          <p><strong>Telefones de Contato:</strong></p>
+          <p>Capitais e Regiões Metropolitanas:</p>
+          <p>71 9999-9999</p>
+          <p>71 9999-9998</p>
+          <p>71 9999-9997</p>
+        </div>
+        <div>
+          <p class="text-2xl mb-2">📍</p>
+          <p><strong>Endereços:</strong></p>
+          <p>Salvador (BA):</p>
+          <p>Av. Orlando Gomes, 1845 – Pituaçu</p>
+          <p>Salvador – BA, CEP: 41650-010</p>
+          <br />
+          <p>Lauro de Freitas (BA):</p>
+          <p>Av. Luiz Tarquínio Pontes, 683 – Jardim Aeroporto</p>
+          <p>CEP: 42702-000</p>
+        </div>
+      </div>
+    </section>
+    <faleConosco/>
+  </template>
+  
+  <script>
 
-                    <div class="telefone">
-                        <i class="bi bi-telephone"></i>
-                        <h3>Telefones de Contato:</h3>
-                        <p>Central de Atendimento para Doações:</p>
-                        <p class="subtitulo">Capitais e Regiões Metropolitanas</p>
-                        <p class="numeros">7199999-9999</p>
-                        <p class="numeros">7199999-9999</p>
-                        <p class="numeros">7199999-9999</p>
-                    </div>
-                    
-                    <div class="endereco">
-                        <i class="bi bi-geo-alt"></i>
-                        <h3>Endereços</h3>
-                        <p>Endereço da unidade em Salvador(BA):</p>
-                        <p class="enderecos">Av. Orlando Gomes, 1845 - Piatã
-                        <br>Salvador - BA. CEP - 41650-010
-                        </p>
-                        <br>
-                        <p>Endereço da unidade em Lauro de Freitas(BA):</p>
-                        <p class="enderecos">Av. Luiz Tarquínio Pontes, 938 - Jardim Aeroporto
-                        <br> Lauro de Freitas - BA.CEP - 42702-000
-                        </p>               
-                    </div>
-                </div>
-            </div>
-        </section>
+   import FaleConosco from './FaleConosco.vue';
+  export default {
+    name: 'ContactInfo',
 
-      <section>
-        <FaleConosco/>
-      </section>
-      
-</template>
-<script>
-import FaleConosco from './FaleConosco.vue';
-
-export default {
-
-    name: 'Cont',
     components: {
-        FaleConosco
+      FaleConosco
     }
-}
-</script>
-<style>
-section.contato{
-    display: flex;
-    justify-content: center;
-}
+  }
 
-section.contato .container{
+
+  </script>
+  
+  <style scoped>
+  p {
+    margin: 0.25rem 0;
+  }
+  body{
     display: flex;
-    margin-top: 135px;
-    color: #ffffff;
     flex-direction: column;
-    text-align: center;
-}
-
-section.contato .informacoes{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 57px;
-    width: 1200px;
-}
-
-section.contato .informacoes i{
-    font-size: 50px;
-}
-
-section.contato .email p{
-    margin: 0;
-}
-
-section.contato .emails{
-    font-size: 14px;
-    padding-top: 0;
-}
-
-section.contato .telefone p{
-    margin: 0;
-}
-
-section.contato .telefone .numeros {
-    font-size: 14px;
-}
-
-section.contato  .telefone .subtitulo {
-    padding-top: 10px;
-    font-size: 14px;
-}
-
-
-section.contato .endereco p{
-    margin: 0;
-}
-
-section.contato .enderecos{
-    font-size: 14px;
-    padding-top: 0px;
-}
-
-section.contato .telefone{
-    width: 350px;
-}
-
-section.contato .email{
-    width: 350px;
-}
-
-section.contato .endereco{
-    width: 350px;
-}
-
-</style>
+  }
+  section {
+    background-color: #165692;
+    width: 100vh;
+    
+  }
+  FaleConosco {
+    margin-top: 2rem;
+  }
+  </style>
+  
