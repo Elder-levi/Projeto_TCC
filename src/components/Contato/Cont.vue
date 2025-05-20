@@ -43,4 +43,89 @@
             </div>
         </section>
 
+      <section>
+        <FaleConosco/>
+      </section>
+      
 </template>
+<script>
+import FaleConosco from './FaleConosco.vue';
+
+export default {
+
+    name: 'Cont',
+    components: {
+        FaleConosco
+    }
+}
+</script>
+<style>
+section.contato{
+    display: flex;
+    justify-content: center;
+}
+
+section.contato .container{
+    display: flex;
+    margin-top: 135px;
+    color: #ffffff;
+    flex-direction: column;
+    text-align: center;
+}
+
+section.contato .informacoes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 57px;
+    width: 1200px;
+}
+
+section.contato .informacoes i{
+    font-size: 50px;
+}
+
+section.contato .email p{
+    margin: 0;
+}
+
+section.contato .emails{
+    font-size: 14px;
+    padding-top: 0;
+}
+
+section.contato .telefone p{
+    margin: 0;
+}
+
+section.contato .telefone .numeros {
+    font-size: 14px;
+}
+
+section.contato  .telefone .subtitulo {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+
+section.contato .endereco p{
+    margin: 0;
+}
+
+section.contato .enderecos{
+    font-size: 14px;
+    padding-top: 0px;
+}
+
+section.contato .telefone{
+    width: 350px;
+}
+
+section.contato .email{
+    width: 350px;
+}
+
+section.contato .endereco{
+    width: 350px;
+}
+
+</style>

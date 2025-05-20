@@ -55,8 +55,12 @@
         </section>
   </template>
   
-  <script setup>
-  
+  <script >
+
+  export default {
+    name: 'Duvidas'
+  }
+
   </script>
   
   <style scoped>

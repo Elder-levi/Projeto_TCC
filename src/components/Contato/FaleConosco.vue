@@ -19,7 +19,10 @@
                 </div>
             </div>
         </section> 
-        <section>
-            
-        </section> 
 </template>
+
+<script>
+export default {
+    name: 'FaleConosco',
+}
+</script>

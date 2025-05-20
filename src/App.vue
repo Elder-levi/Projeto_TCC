@@ -7,14 +7,12 @@
   </header>
   <main>
 
-   <Duvidas/>
+   <Contatos/>
 
   </main>
   <footer>
-
     <final/>
-
-  </footer>   
+  </footer>  
 </template>
 <script >
 import BarraNavegacao from '../src/components/Inicio/NavBar.vue'
@@ -26,6 +24,7 @@ import final from '../src/components/Inicio/FooterFinal.vue'
 import Somos from  "../src/components/QuemSomos/QuemSomos.vue"
 import SejaVolu from '../src/components/SejaVolu/VolunteerForm.vue'
 import Duvidas from '../src/components/Duvidas/Faq.vue'
+import  Contatos from "@/components/Contato/Cont.vue"
 export default{
 
   name: 'App',
@@ -38,6 +37,7 @@ export default{
     Somos,
     SejaVolu,
     Duvidas,
+    Contatos
   },
 }
 
