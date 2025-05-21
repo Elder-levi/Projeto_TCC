@@ -28,17 +28,19 @@
     </footer>
 </template>
 <script>
+
 export default {
     name: 'FooterFinal',
     }
 </script>
-<style>
+<style  >
 footer{
   background-color: #292636;
   margin: 0;
-  padding: 0;
+  
+  padding: 20px;
   width: 100%;
-  height: 80px;
+  height: 70px;
   position: fixed;
   bottom: 0;
   left: 0;

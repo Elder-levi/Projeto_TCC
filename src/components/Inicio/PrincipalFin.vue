@@ -62,7 +62,13 @@ export default{
     name: 'PrincipalFin',
 }
 </script>
-<style>
+<style scoped>
+
+section{
+  
+    background: #292636;
+}
+
 section.final{
     margin-bottom: 70px;
 }

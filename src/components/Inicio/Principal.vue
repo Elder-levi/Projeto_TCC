@@ -3,7 +3,7 @@
 <section class="topo">
             <div class="container">
                 <div class="imgtopo">
-                    <img src="../components/imagens/imagem1.png">
+                    <img src="@/components/imagens/imagem1.png">
                 </div>
     
                 <div class="texttopo">
@@ -15,8 +15,6 @@
                 </div>
             </div>
         </section>
-  
- 
 </template>
 <script>
 export default{
@@ -32,6 +30,7 @@ body{
 main{
     display: flex;
     flex-direction: column;
+ 
 }
 
 

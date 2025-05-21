@@ -1,23 +1,26 @@
 
 <template>
-  <header>
+    
+  <div class="page-container">
+    <!-- Navbar sempre visível -->
+    <header>
+      <BarraNavegacao />
+    </header>
 
-    <BarraNavegacao/>
+    <!-- Conteúdo das rotas aqui -->
+    <main class="main-content">
+      <router-view/>
+    </main>
 
-  </header>
- 
-
-   <Contatos/>
-
-  <footer>
-    <final/>
-  </footer>  
+    <!-- Footer sempre visível -->
+    <footer class="app-footer">
+      <final />
+    </footer>
+  </div>
 </template>
 <script >
 import BarraNavegacao from '../src/components/Inicio/NavBar.vue'
-import Principal from '../src/components/Inicio/Principal.vue'
-import PrincipalMeio from '../src/components/Inicio/PrincipalMeio.vue'
-import PrincipalFin from '../src/components/Inicio/PrincipalFin.vue'
+import UniPrincipal from './components/Inicio/UniPrincipal.vue'
 import final from '../src/components/Inicio/FooterFinal.vue'
 //INICIO
 import Somos from  "../src/components/QuemSomos/QuemSomos.vue"
@@ -29,32 +32,39 @@ export default{
   name: 'App',
   components:{
     BarraNavegacao,
-    Principal,
-    PrincipalMeio,
-    PrincipalFin,
+    UniPrincipal,
     final,
     Somos,
     SejaVolu,
     Duvidas,
     Contatos
-  },
+  }
 }
-
-
 </script>
 
-<style scoped>
-*{
-margin: 0;
-padding: 0;
-block-size: none;
+<style >
+* {
+  margin: 0;
+  padding: 0;
+  
 }
- footer{
-  position: fixed;
-  left: 0%;
-  bottom: 0%;
-  width: 100%;
-  height: 20em;
- }
- 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;     
+  width: 100vw;           
+  overflow-x: hidden; 
+
+}
+
+.main-content {
+  flex: 1;              
+}
+
+
+.app-footer {
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
 </style>

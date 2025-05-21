@@ -15,7 +15,7 @@
 
                 <div class="instituicoes">
                     <div class="larmaria">
-                        <img src="../components/imagens/larmaria (1).png">
+                        <img src="../imagens/larmaria (1).png">
                         <h2>Abrigo Lar Irmã Benedita Camurgi</h2>
                         <p>O Abrigo Lar Irmã Benedita Camurugi nasceu com o objetivo de abrigar crianças carentes da região, oferecendo
                          moradia, atividades recreativas, incentivo a educação formal e tudo o que é necessário
@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="immel">
-                        <img src="../components/imagens/immel.jpg">
+                        <img src="../imagens/immel.jpg">
                         <h2>Instituto para um mundo melhor - IMMEL</h2>
                         <p>O IMMEL é uma instituição de direito
                             privado, sob a forma de associação sem fins lucrativos,
@@ -40,7 +40,7 @@
                     </div>
                     
                     <div class="manasses">
-                        <img src="../components/imagens/manasses.jpg">
+                        <img src="../imagens/manasses.jpg">
                         <h2>Instituição social Manassés</h2>
                         <P>A Instituição destina-se ao acolhimento voluntário de pessoas em situação de dependência química,
                             utilizando-se de tratamentos terapêuticos, acompanhamento psicológico, orientação médica, atividades esportivas,
@@ -60,6 +60,7 @@ export default{
 }
 </script>
 <style scoped>
+
 section.meio{
     background-color: #292636;
 }
