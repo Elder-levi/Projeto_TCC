@@ -9,11 +9,12 @@
     </div>
 
     <nav class="navbar-center">
-      <a href="#">INÍCIO</a>
-      <a href="#">DÚVIDAS</a>
-      <a href="#"><strong>QUEM SOMOS</strong></a>
-      <a href="#">CONTATO</a>
-      <a href="#"><strong>SEJA VOLUNTÁRIO</strong></a>
+     
+      <router-link to="/">Inicio</router-link>
+      <router-link to="/Duvida">Dúvidas</router-link>
+      <router-link to="/QuemSomos">QUEM SOMOS</router-link>
+      <router-link to="/Contato">CONTATO</router-link>
+      <router-link to="/SejaVoluntario">SEJA VOLUNTÁRIO</router-link>
     </nav>
 
     <div class="navbar-right">
@@ -41,7 +42,6 @@ header{
   top: 0;
   left: 0;
 }
-
 
 .navbar {
   display: flex;
