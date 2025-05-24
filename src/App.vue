@@ -2,17 +2,11 @@
 <template>
     
   <div class="page-container">
-    <!-- Navbar sempre visível -->
+    
     <header>
-      <BarraNavegacao />
+      <BarraNavegacao/>
     </header>
-
-    <!-- Conteúdo das rotas aqui -->
-    <main class="main-content">
-      <router-view/>
-    </main>
-
-    <!-- Footer sempre visível -->
+    <router-view/>
     <footer class="app-footer">
       <final />
     </footer>
@@ -20,24 +14,22 @@
 </template>
 <script >
 import BarraNavegacao from '../src/components/Inicio/NavBar.vue'
-import UniPrincipal from './components/Inicio/UniPrincipal.vue'
+
 import final from '../src/components/Inicio/FooterFinal.vue'
+<<<<<<< HEAD
 //INICIO
 import Somos from  "../src/components/QuemSomos/QuemSomos.vue"
 import SejaVolu from '../src/components/SejaVolu/VolunteerForm.vue'
 import Duvidas from '../src/components/Duvidas/Faq.vue'
 import  Contatos from "../sr/components/Contato/Cont.vue"
+=======
+>>>>>>> f795d8d2a9093f27e512d582f7ee9d823e92d61f
 export default{
 
   name: 'App',
   components:{
     BarraNavegacao,
-    UniPrincipal,
-    final,
-    Somos,
-    SejaVolu,
-    Duvidas,
-    Contatos
+    final
   }
 }
 </script>
@@ -60,7 +52,6 @@ export default{
 .main-content {
   flex: 1;              
 }
-
 
 .app-footer {
   margin: 0;
