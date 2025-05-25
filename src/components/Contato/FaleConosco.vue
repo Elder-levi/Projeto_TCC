@@ -19,7 +19,7 @@
           <label>Mensagem:</label>
           <textarea v-model="form.message" class="input" placeholder="Digite a sua mensagem"></textarea>
         </div>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar mensagem</button>
+        <button type="submit" style="background-color:#165692;" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar mensagem</button>
       </form>
     </section>
   </template>

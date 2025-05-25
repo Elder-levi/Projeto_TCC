@@ -32,8 +32,6 @@ main{
     flex-direction: column;
  
 }
-
-
 section.topo{
     background-color: #4872ae;
 }

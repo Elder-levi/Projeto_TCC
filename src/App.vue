@@ -16,14 +16,6 @@
 import BarraNavegacao from '../src/components/Inicio/NavBar.vue'
 
 import final from '../src/components/Inicio/FooterFinal.vue'
-<<<<<<< HEAD
-//INICIO
-import Somos from  "../src/components/QuemSomos/QuemSomos.vue"
-import SejaVolu from '../src/components/SejaVolu/VolunteerForm.vue'
-import Duvidas from '../src/components/Duvidas/Faq.vue'
-import  Contatos from "../sr/components/Contato/Cont.vue"
-=======
->>>>>>> f795d8d2a9093f27e512d582f7ee9d823e92d61f
 export default{
 
   name: 'App',
@@ -46,7 +38,6 @@ export default{
   min-height: 100vh;     
   width: 100vw;           
   overflow-x: hidden; 
-
 }
 
 .main-content {

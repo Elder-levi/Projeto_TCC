@@ -15,7 +15,7 @@
         <Availability @next="nextStep" @prev="prevStep" />
       </div>
       <div v-else-if="currentStep === 3">
-        <AcademicInfo @prev="prevStep" />
+        <AcademicInfo @prev="prevStep" @Enviar="enviarTudo" />
      
       </div>
         </div>
@@ -31,15 +31,44 @@
   import Availability from './Availability.vue'
   import AcademicInfo from './AcademicInfo.vue'
   
-  const currentStep = ref(1)
+
   
-  function nextStep() {
+  const currentStep = ref(1)
+
+// Armazena os dados de cada etapa
+const personalData = ref({})
+const availabilityData = ref({})
+const academicData = ref({})
+
+function nextStep(data) {
+  if (currentStep.value === 1) {
+    personalData.value = data
+    currentStep.value++
+  } else if (currentStep.value === 2) {
+    availabilityData.value = data
     currentStep.value++
   }
-  
-  function prevStep() {
-    currentStep.value--
+}
+
+function prevStep() {
+  currentStep.value--
+}
+
+// Função chamada pelo último componente
+function enviarTudo(dataFinal) {
+  academicData.value = dataFinal
+
+  const dadosCompletos = {
+    ...personalData.value,
+    ...availabilityData.value,
+    ...academicData.value
   }
+
+  console.log('🔗 Todos os dados do voluntário:', dadosCompletos)
+
+  // Aqui você pode enviar para o backend:
+  // await axios.post('/api/voluntarios', dadosCompletos)
+}
   </script>
 
 <style scoped>
