@@ -13,7 +13,8 @@ const routes = [
   { path: '/SejaVoluntario',name: 'SejaVol', component: SejaVol, }
 
 ]
-
+ // Testes
+ 
 const router = createRouter({
   history: createWebHistory(), 
   routes,
