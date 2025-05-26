@@ -67,11 +67,10 @@ export default{
 section{
   
     background: #292636;
+    margin: 0%;
 }
 
-section.final{
-    margin-bottom: 70px;
-}
+
 section.final .container{
     display: flex;
     flex-direction: column;

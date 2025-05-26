@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-blue-600 text-white p-8 text-center">
+    <section class="bg-blue-600 text-white p-8 text-center ">
       <h2 class="font-bold text-xl mb-6">NOSSOS CONTATOS</h2>
       <div class="flex flex-col md:flex-row justify-around gap-6">
         <div>
@@ -36,6 +36,7 @@
   <script>
 
    import FaleConosco from './FaleConosco.vue';
+
   export default {
     name: 'ContactInfo',
 
@@ -64,7 +65,11 @@
   }
   section {
     background-color: #165692;
-    width: 100vh;
+    width: 100%;
+    height: 71vw;
+    font-size: 30px;
+    padding: auto;
+    margin: auto;
     
   }
   FaleConosco {

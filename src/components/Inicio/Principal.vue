@@ -23,20 +23,12 @@ export default{
 </script>
 
 <style scoped>
-body{
-    margin: 0;
-    padding: 0; 
-}
-main{
-    display: flex;
-    flex-direction: column;
- 
-}
+
 section.topo{
     background-color: #4872ae;
 }
 section.topo .container{
-    padding: 200px 10% 200px;
+    padding: 150px 2% 200px;
     display: flex;
     column-gap: 50px;
 }
@@ -49,15 +41,18 @@ section.topo img{
 section.topo .texttopo{
     color: #ffffff;
     font-size: 25px;
+    
 }
-
+p{
+ width: 600px;
+}
 section.topo .texttopo h1{
     margin: 0;
     padding: 0;
 }
 
 section.topo button{
-    padding: 17px 30px;
+    padding: 17px ;
     border-radius: 60px;
     border: none;
     background-color: #ffffff;

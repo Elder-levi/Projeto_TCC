@@ -1,8 +1,8 @@
 <template>
     <section class="bg-white p-8 text-center">
-      <h2 class="font-bold text-lg">FALE CONOSCO</h2>
-      <p class="mb-6">Deixe sua mensagem abaixo:</p>
-      <form class="max-w-md mx-auto space-y-4">
+      <form class="volunteer-form container mt-4 p-4 bg-white rounded shadow">
+        <h2 class="font-bold text-lg">FALE CONOSCO</h2>
+        <p class="mb-6">Deixe sua mensagem abaixo:</p>
         <div>
           <label>Nome:</label>
           <input v-model="form.name" type="text" class="input" placeholder="Digite o seu nome" />
@@ -41,6 +41,7 @@
   </script>
   
   <style scoped>
+
   .input {
     width: 100%;
     padding: 0.5rem;

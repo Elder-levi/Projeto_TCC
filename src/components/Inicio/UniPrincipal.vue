@@ -17,7 +17,7 @@ import PrincipalFin from './PrincipalFin.vue'
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
-  width: 100svh;
+  width: 100vw;
   height: 100%;
 }
 

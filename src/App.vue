@@ -37,16 +37,6 @@ export default{
   flex-direction: column;
   min-height: 100vh;     
   width: 100vw;           
-  overflow-x: hidden; 
-}
-
-.main-content {
-  flex: 1;              
-}
-
-.app-footer {
-  margin: 0;
-  padding: 0;
-  width: 100px;
+ 
 }
 </style>

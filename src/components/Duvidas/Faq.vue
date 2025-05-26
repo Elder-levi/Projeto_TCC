@@ -66,7 +66,9 @@
   <style scoped>
 
   section{
+      margin: 0%;
     background-color: #165692;
+   height: 71vw;
   }
 
   section.duvidas .principaisduvidas{
@@ -82,6 +84,7 @@ section.duvidas .titulo h1{
 section.duvidas .groupInputs .line{
     width: 800px;
     height: 0.08px;
+    text-align: center;
     background-color: #000000;
     margin-bottom: 20px;
     margin-top: 10px;

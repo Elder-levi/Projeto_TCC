@@ -6,11 +6,11 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/views/index.html">INÍCIO</a></li>
-                    <li><a href="/views/quemsomos.html">QUEM SOMOS</a></li>
-                    <li><a href="/views/voluntario.html">SEJA VOLUNTÁRIO</a></li>
-                    <li><a href="/views/duvidas.html">DÚVIDAS</a></li>
-                    <li><a href="/views/contato.html">CONTATO</a></li>
+                    <li><router-link to="/">INICIO</router-link></li>
+                    <li> <router-link to="/QuemSomos">QUEM SOMOS</router-link></li>
+                    <li><router-link to="/SejaVoluntario">SEJA VOLUNTÁRIO</router-link></li>
+                    <li>  <router-link to="/Duvida">DUVIDAS</router-link></li>
+                    <li><router-link to="/Contato">CONTATO</router-link></li>
                 </ul>
             </nav>
 
@@ -37,13 +37,8 @@ export default {
 footer{
   background-color: #292636;
   margin: 0;
-  
-  padding: 20px;
   width: 100%;
-  height: 70px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  height: 100%;
  }
 footer .container{
     display: flex;

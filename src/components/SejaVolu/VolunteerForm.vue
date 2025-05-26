@@ -81,11 +81,9 @@ body{
     justify-content: center;
     align-items: center;
     min-height: auto; 
-   }
-  .Containe{
     width: 50em;
-    max-width: 50em;  
-  }
-
+    margin: auto;
+    padding: auto;
+   }
 
 </style>

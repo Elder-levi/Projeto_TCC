@@ -112,6 +112,7 @@ section.quemsomos .text{
 
 section.quemsomos .text p{
     margin-top: 40px;
+    font-size: 35px ;
 }
 
 section.quemsomos .line{
@@ -120,4 +121,7 @@ section.quemsomos .line{
     background-color: #ffffff;
 }
 
+.titulo > h1{
+    font-size: 60px;
+}
 </style>
