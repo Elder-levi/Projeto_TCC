@@ -11,7 +11,7 @@
                             <p>A sua doação é destinada à compra de mantimentos que serão distribuídos para as instituições 
                                 <br>com maior vulnerabilidade.</p>
                         </details>
-                        <div class="line"></div>
+                       
                         <details>
                             <summary><b>Por quanto tempo devo doar?</b></summary>
                             <p>Você pode doar até quando quiser. Não estipulamos uma data limite para continuar doando,
@@ -22,7 +22,7 @@
                                 <br>melhores.
                             </p>
                         </details>
-                        <div class="line"></div>
+                       
                         <details>
                             <summary><b>Posso cancelar minha doação?</b></summary>
                             <p>A hora que quiser. Você pode entrar em contato através do nosso Whatsapp 71 99988-8888,
@@ -30,7 +30,7 @@
                                 <br>assunto "cancelamento".
                             </p>
                         </details>
-                        <div class="line"></div>
+                        
                         <details>
                             <summary><b>Como entrar em contato com vocês?</b></summary>
                             <p>Estamos sempre aperfeiçoando nosso atendimento aos doadores e doadoras. Hoje, você pode
@@ -38,7 +38,7 @@
                                 <br>ou nos enviar um e-mail pelo AAIC_atendimento@org.br.
                             </p>
                         </details>
-                        <div class="line"></div>
+                      
                         <details>
                             <summary><b>Receberei informações sobre minha doação?</b></summary>
                             <p>Queremos sempre poder mostrar o impacto da sua doação, como forma de gratidão e como
@@ -48,7 +48,7 @@
                                 <br>estaremos sempre informando à vocês o que temos feito juntos!
                             </p>
                         </details>
-                        <div class="line"></div>
+                      
                     </div>
                 </div>
             </div>
@@ -81,6 +81,18 @@ section.duvidas .titulo h1{
     color: #ffffff;
 }
 
+p , summary{
+font-size:  25px;
+
+}
+
+details{
+    margin-bottom: 30px;
+}
+
+h1{
+    margin-bottom: 70px;
+}
 section.duvidas .groupInputs .line{
     width: 800px;
     height: 0.08px;
