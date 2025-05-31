@@ -18,7 +18,8 @@
     </nav>
 
     <div class="navbar-right">
-      <button class="donate-button">QUERO<br />DOAR</button>
+       <router-link to="/QueroDoar">
+       <button class="donate-button">QUERO<br />DOAR</button></router-link>
     </div>
   </header>
 </template>

@@ -26,7 +26,9 @@
 
     <div class="d-flex justify-content-between mt-4">
       <button class="btn btn-secondary" @click="$emit('prev')">Voltar</button>
-      <button class="btn btn-primary" @click="enviarDisponibilidade">Próximo</button>
+      <button class="btn btn-primary" 
+      style = " background-color: #165692;"
+      @click="enviarDisponibilidade">Próximo</button>
     </div>
   </div>
 </template>

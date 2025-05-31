@@ -2,8 +2,8 @@
     <section>
         <div class="volunteer-form container mt-4 p-4 bg-white rounded shadow">
  <div class="Containe">
-              <h2 class="text-center text-white bg-primary p-3 rounded">SEJA UM VOLUNTÁRIO</h2>
-      <p class="text-center text-muted">
+              <h2 class="text-center text-white  " style = " background-color: #165692;">SEJA UM VOLUNTÁRIO</h2>
+      <p class="text-center text-muted " >
         Que bom que está aqui! Preencha essa ficha de interesse no trabalho voluntário e acrescente uma cidadania para o coração.
       </p>
   
@@ -73,17 +73,22 @@ function enviarTudo(dataFinal) {
 
 <style scoped>
 body{
-    background-color: #165692;
+    
+   
  }
   section{
-    
+    background-color: #165692;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: auto; 
-    width: 50em;
+    height: 100svh;
+    width: 100vw;
     margin: auto;
     padding: auto;
+   }
+   .container {
+      width: 50em;
    }
 
 </style>

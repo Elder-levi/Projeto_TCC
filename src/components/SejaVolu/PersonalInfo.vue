@@ -17,7 +17,7 @@
     <input v-model="cpf" type="text" class="form-control mb-2" placeholder="CPF" />
 
     <div class="text-end">
-      <button class="btn btn-primary mt-3" @click="enviarDados">Próximo</button>
+      <button class="btn btn-primary mt-3" style = " background-color: #165692;" @click="enviarDados">Próximo</button>
     </div>
   </div>
 </template>

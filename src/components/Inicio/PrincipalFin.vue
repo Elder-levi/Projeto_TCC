@@ -66,7 +66,7 @@ export default{
 
 section{
   
-    background: #292636;
+    background:  #165692;
     margin: 0%;
 }
 

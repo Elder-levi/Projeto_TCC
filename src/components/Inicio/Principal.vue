@@ -25,7 +25,7 @@ export default{
 <style scoped>
 
 section.topo{
-    background-color: #4872ae;
+    background-color: #165692;
 }
 section.topo .container{
     padding: 150px 2% 200px;
