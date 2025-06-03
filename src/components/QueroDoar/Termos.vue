@@ -13,3 +13,10 @@ export default {
   name: 'Termos'
 }
 </script>
+<style scoped>
+div{
+  font-size: 25px;
+  margin:35px;
+}
+
+</style>

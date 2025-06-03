@@ -19,3 +19,9 @@ export default {
   components: { DadosPessoais, Pagamento }
 }
 </script>
+
+<style scoped>
+ .dinheiro {
+  font-size: 25px;
+ }
+</style>

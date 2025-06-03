@@ -2,10 +2,10 @@
   <section>
     <div class="container">
       <div class="form">
-        <DoacaoTipo @selecionar="tipoSelecionado = $event" />
+        <DoacaoTipo  @selecionar="tipoSelecionado = $event" />
 
-        <FormularioDinheiro v-if="tipoSelecionado === 'dinheiro'" />
-        <FormularioUtensilios v-else-if="tipoSelecionado === 'utensilios'" />
+        <FormularioDinheiro   v-if="tipoSelecionado === 'dinheiro'" />
+        <FormularioUtensilios  v-else-if="tipoSelecionado === 'utensilios'" />
 
         <TermosPrivacidade />
         <BotaoDoar />
@@ -46,14 +46,26 @@ section{
  height: 100svh;
  width: 100%;
 }
- /*
+
 .container {
-  background-color: #ffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 600px;
-  width: 500px;
-}*/
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 45svh;
+  width: 50%;
+  margin: auto;
+  padding: auto;
+  border-radius: 20px;
+}
+
+.bot{
+    color: #ffffff;
+    background-color: #4872ae;
+    width: 100%;
+    margin-left: 25px;
+    transition: 0.5s ease-in-out;
+}
+
+.bot:hover{
+    transform: scale(1.05);
+}
+
 </style>

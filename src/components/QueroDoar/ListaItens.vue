@@ -25,11 +25,6 @@ export default {
   margin: 8px 0;
 }
 
-.contador {
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-}
 
 .contador button {
   width: 30px;

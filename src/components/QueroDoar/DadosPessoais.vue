@@ -17,3 +17,17 @@ export default {
     name: 'DadosPessoais',
 }
 </script>
+
+<style scoped>
+input{
+    padding: 8px;
+    border-radius: 8px;
+    border: solid 1px grey;
+    margin-bottom: 10px;
+    width: 350px;
+    font-size: 25px;
+}
+
+
+
+</style>

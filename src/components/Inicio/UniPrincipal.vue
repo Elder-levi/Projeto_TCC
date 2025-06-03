@@ -6,10 +6,20 @@
   </div>
 </template>
 
-<script setup>
-import Principal from './Principal.vue'
-import PrincipalMeio from './PrincipalMeio.vue'
-import PrincipalFin from './PrincipalFin.vue'
+<script>
+import Principal from '../Inicio/Principal.vue'
+import PrincipalMeio from '../Inicio/PrincipalMeio.vue'
+import PrincipalFin from '../Inicio/PrincipalFin.vue'
+
+export default {
+  name: 'UniPrincipal',
+  components: {
+    Principal,
+    PrincipalMeio,
+    PrincipalFin
+  }
+}
+
 </script>
 
 <style scoped>
