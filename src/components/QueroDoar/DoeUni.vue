@@ -1,11 +1,17 @@
 <template>
   <section>
     <div class="container">
+      
+
       <div class="form">
         <DoacaoTipo  @selecionar="tipoSelecionado = $event" />
-
         <FormularioDinheiro   v-if="tipoSelecionado === 'dinheiro'" />
         <FormularioUtensilios  v-else-if="tipoSelecionado === 'utensilios'" />
+        
+
+
+
+
 
         <TermosPrivacidade />
         <BotaoDoar />
