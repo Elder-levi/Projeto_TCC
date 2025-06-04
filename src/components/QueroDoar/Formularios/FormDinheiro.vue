@@ -24,4 +24,13 @@ export default {
  .dinheiro {
   font-size: 25px;
  }
+ input{
+    padding: 8px;
+    border-radius: 8px;
+    border: solid 1px grey;
+    margin-bottom: 10px;
+    width: 100%;
+    font-size: 25px;
+}
+
 </style>

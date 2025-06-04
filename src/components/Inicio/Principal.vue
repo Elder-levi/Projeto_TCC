@@ -11,7 +11,7 @@
                     <br>mas imensurável para quem recebe:
                     </h1>
                     <p>Com sua doação, você transforma esperança em realidade. Cada contribuição ajuda a oferecer suporte vital a comunidades carentes, garantindo um futuro melhor. Seja parte dessa corrente de solidariedade que impacta vidas. Sua generosidade pode fazer toda a diferença. Doe agora e mude histórias!</p>
-                    <button ><b>DOE AGORA!</b></button>
+                  <router-link to="/QueroDoar"><button ><b>DOE AGORA!</b></button></router-link>  
                 </div>
             </div>
         </section>

@@ -7,12 +7,6 @@
         <DoacaoTipo  @selecionar="tipoSelecionado = $event" />
         <FormularioDinheiro   v-if="tipoSelecionado === 'dinheiro'" />
         <FormularioUtensilios  v-else-if="tipoSelecionado === 'utensilios'" />
-        
-
-
-
-
-
         <TermosPrivacidade />
         <BotaoDoar />
       </div>
@@ -44,34 +38,26 @@ export default {
 </script>
 <style scoped>
 
-section{
- background-image: url('../imagens/teste.jpg'); 
- background-attachment: fixed;
- background-repeat: no-repeat;
- background-size: cover;
- height: 100svh;
- width: 100%;
+section {
+  background-image: url('../imagens/teste.jpg'); 
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; 
 }
 
 .container {
   background-color: rgba(255, 255, 255, 0.8);
-  height: 45svh;
-  width: 50%;
-  margin: auto;
-  padding: auto;
+  width: 50svh;
+  height: auto;
   border-radius: 20px;
-}
-
-.bot{
-    color: #ffffff;
-    background-color: #4872ae;
-    width: 100%;
-    margin-left: 25px;
-    transition: 0.5s ease-in-out;
-}
-
-.bot:hover{
-    transform: scale(1.05);
+  margin-left: 2rem; 
+  margin-top: 2rem;   
 }
 
 </style>

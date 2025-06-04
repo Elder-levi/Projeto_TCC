@@ -16,7 +16,7 @@
             <div class="diferenciais">
                 <div class="absolute">
                     <div class="icon">
-                        <i class="bi bi-search" id="italico"></i>
+                        <i class="bi bi-search" id="italico"><img src="../imagens/logos/Menos_Pior.png" alt=""></i>
                     </div>
 
                     <div class="container2">
@@ -30,7 +30,7 @@
                 
                 <div class="absolute">
                     <div class="icon">
-                        <i class="bi bi-shield-fill-check"></i>
+                        <i class="bi bi-shield-fill-check"><img src="../imagens/logos/escudo-removebg-preview.png" alt=""></i>
                     </div>
                     <div class="container2">
                         <h3>Segurança</h3>
@@ -43,7 +43,7 @@
 
                 <div class="absolute">
                     <div class="icon">
-                        <i class="bi bi-award"></i>
+                        <i class="bi bi-award"> <img src="../imagens/logos/mead.png" alt=""> </i>
                     </div>
 
                     <div class="container2">
@@ -63,6 +63,12 @@ export default{
 }
 </script>
 <style scoped>
+
+
+img{
+    color:#ffffff;
+    border-radius: 200px;
+}
 
 section{
   

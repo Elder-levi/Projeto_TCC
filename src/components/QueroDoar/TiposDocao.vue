@@ -11,37 +11,24 @@ export default{
 </script>
 <style scoped>
 
-.bot {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  background-color: #4872ae;
-  padding: 1rem;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
+
 
 .btndoacao {
   color: white;
-  background-color: transparent;
-  border: 2px solid white;
+  width: 20em;
+  height: 4em;
+  background-color: #4872ae;
   padding: 0.5rem 1rem;
+  margin: 10px;
   border-radius: 20px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-width: 150px;
   text-align: center;
 }
 
 .btndoacao:hover {
-  background-color: white;
-  color: #4872ae;
+  transform: scale(1.05);
 }
 
-.btndoacao.ativo {
-  background-color: white;
-  color: #4872ae;
-  font-weight: bold;
-}
 </style>

@@ -24,7 +24,7 @@ export default {
     margin-top: 25px;
     margin-bottom: 25px;
     cursor: pointer;
-    transition: 0.5s ease-in-out;
+    transition: all 0.3s ease;
 }
 
 .btndoar:hover{

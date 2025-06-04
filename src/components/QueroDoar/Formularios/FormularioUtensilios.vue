@@ -27,3 +27,10 @@ export default {
   components: { DadosPessoais, ListaItens }
 }
 </script>
+
+<style scoped>
+.text{
+  font-size: 26px;
+  
+}
+</style>
