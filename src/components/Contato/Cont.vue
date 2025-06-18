@@ -71,9 +71,8 @@
 
   display: grid;
   grid-template-columns: 1fr 2fr 3fr;
-  gap: 45px;
-  margin: 5em auto;
-  
+  gap: 6em;
+  margin: 6rem auto;
 }
 
   section {

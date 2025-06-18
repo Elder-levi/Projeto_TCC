@@ -60,6 +60,8 @@ section.quemsomos {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
+    margin: 0;
+    padding: 0;
 }
 
 section.quemsomos .icones{
@@ -123,5 +125,6 @@ section.quemsomos .line{
 
 .titulo > h1{
     font-size: 60px;
+    text-align: left;
 }
 </style>
