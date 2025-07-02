@@ -2,13 +2,15 @@
 <footer>
         <div class="container">
             <div class="logofooter">
-                <img src="../imagens/Logo4.png">
+                 <router-link to="/formsLog">
+                    <img src="../imagens/Logo4.png">
+                </router-link>
             </div>
             <nav>
                 <ul>
                     <li><router-link to="/">INICIO</router-link></li>
                     <li> <router-link to="/QuemSomos">QUEM SOMOS</router-link></li>
-                    <li><router-link to="/SejaVoluntario">SEJA VOLUNTÁRIO</router-link></li>
+                    <li><router-link to="/SejaVoluntario">CADASTRO</router-link></li>
                     <li>  <router-link to="/Duvida">DUVIDAS</router-link></li>
                     <li><router-link to="/Contato">CONTATO</router-link></li>
                 </ul>
