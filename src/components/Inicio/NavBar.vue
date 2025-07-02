@@ -14,7 +14,7 @@
       <router-link to="/Duvida">DUVIDAS</router-link>
       <router-link to="/QuemSomos">QUEM SOMOS</router-link>
       <router-link to="/Contato">CONTATO</router-link>
-    <router-link to="/SejaVoluntario">CADASTRO</router-link>
+    <router-link to="/Cadastro">CADASTRO</router-link>
     </nav>
 
     <div class="navbar-right">

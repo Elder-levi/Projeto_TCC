@@ -54,6 +54,7 @@ import PersonalInfo from './PersonalInfo.vue'
 import Availability from './Availability.vue'
 import AcademicInfo from './AcademicInfo.vue'
 import InstitutionInfo from './InstitutionInfo.vue'
+import axios from 'axios'
 
 const selectedForm = ref('voluntario')
 const currentStep = ref(1)
@@ -84,12 +85,9 @@ function enviarTudo(dataFinal) {
     ...availabilityData.value,
     ...academicData.value
   }
-
-  console.log('🔗 Todos os dados do voluntário:', dadosCompletos)
-
-  // Aqui você pode enviar para o backend, ex:
-  // await axios.post('/api/voluntarios', dadosCompletos)
 }
+
+
 </script>
 
 <style scoped>
