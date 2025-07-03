@@ -48,7 +48,7 @@ export default {
   methods: {
     async carregarInstituicoes() {
       try {
-        const res = await axios.get('http://localhost:2500/Intituicoes')
+        const res = await axios.get('http://back-end-tcc.onrender.com/Intituicoes')
         this.instituicoesPendentes = res.data.filter(i => i.status === 'pendente')
       } catch (err) {
         console.error('Erro ao buscar instituições:', err)
@@ -58,7 +58,7 @@ export default {
     async atualizarStatus(id, status) {
       try {
         await axios.patch(
-          `http://localhost:2500/inscricoes/instituicoes/pendentes/${id}`,
+          `http://back-end-tcc.onrender.com/inscricoes/instituicoes/pendentes/${id}`,
           { status }
         )
         // Remove da lista após ação

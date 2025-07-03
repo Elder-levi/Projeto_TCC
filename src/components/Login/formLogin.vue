@@ -28,7 +28,7 @@ const router = useRouter()
 
 const fazerLogin = async () => {
   try {
-    const response = await axios.post('http://localhost:2500/login', {
+    const response = await axios.post('https://back-end-tcc.onrender.com/login', {
       login: Login.value,
       senha: Senha.value,
     });

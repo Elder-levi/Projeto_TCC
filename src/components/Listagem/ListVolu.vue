@@ -52,7 +52,7 @@ export default {
   methods: {
     async carregarVoluntarios() {
       try {
-        const response = await axios.get('http://localhost:2500/Volutarios')
+        const response = await axios.get('http://back-end-tcc.onrender.com/Volutarios')
         this.voluntariosPendentes = response.data.filter(v => v.status === 'pendente')
       } catch (error) {
         console.error('Erro ao buscar voluntários:', error)
@@ -61,7 +61,7 @@ export default {
 
     async atualizarStatus(id, status) {
       try {
-       await axios.patch(`http://localhost:2500/inscricoes/voluntarios/pendentes/${id}`, { status })
+       await axios.patch(`http://back-end-tcc.onrender.com/inscricoes/voluntarios/pendentes/${id}`, { status })
 
         this.voluntariosPendentes = this.voluntariosPendentes.filter(v => v._id !== id)
       } catch (error) {
