@@ -90,14 +90,15 @@ async function enviarTudo(dataFinal) {
         ...availabilityData.value,
         ...academicData.value
       }
-      const response = await axios.post('http://back-end-tcc.onrender.com/cadastro/Volutario', dadosCompletos)
+      const response = await axios.post('http://localhost:2500/cadastro/Volutario', dadosCompletos)
       console.log('Voluntário cadastrado:', response.data)
 
     } else if (selectedForm.value === 'instituicao') {
       institutionData.value = { ...institutionData.value, ...dataFinal }
-     const response = await axios.post('http://back-end-tcc.onrender.com/cadastro/Inst', dataFinal)
+     const response = await axios.post('http://localhost:2500/cadastro/Inst', dataFinal)
       console.log('Instituição cadastrada:', response.data)
     }
+    
     // Resetar ou mostrar mensagem de sucesso se quiser
     currentStep.value = 1
 
