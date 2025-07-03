@@ -4,7 +4,7 @@
     <input v-model="nome" type="text" class="form-control mb-2" placeholder="Nome" />
     <input v-model="sobrenome" type="text" class="form-control mb-2" placeholder="Sobrenome" />
     <input v-model="email" type="email" class="form-control mb-2" placeholder="E-mail" />
-    <input v-model="dataNascimento" type="text" class="form-control mb-2" placeholder="Data de nascimento" />
+    <input v-model="dataNascimento" type="number" class="form-control mb-2" placeholder="Data de nascimento" />
     
     <select v-model="genero" class="form-select mb-2">
       <option disabled value="">Gênero</option>
@@ -13,8 +13,8 @@
       <option>Outro</option>
     </select>
 
-    <input v-model="whatsapp" type="text" class="form-control mb-2" placeholder="WhatsApp com DDD" />
-    <input v-model="cpf" type="text" class="form-control mb-2" placeholder="CPF" />
+    <input v-model="whatsapp" type="number" class="form-control mb-2" placeholder="WhatsApp com DDD" />
+    <input v-model="cpf" type="number" class="form-control mb-2" placeholder="CPF" />
 
     <div class="text-end">
       <button class="btn btn-primary mt-3" style = " background-color: #165692;" @click="enviarDados">Próximo</button>

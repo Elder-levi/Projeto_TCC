@@ -1,60 +1,72 @@
 <template>
   <div class="analise-page">
-    <h1 class="desta">Análise das Instituições</h1>
+    <h1 class="desta">Análise de Instituições</h1>
 
-    <div id="box">
-      <h2>Análise de Cadastro</h2>
+    <div v-if="instituicoesPendentes.length > 0">
+      <div
+        v-for="(inst, index) in instituicoesPendentes"
+        :key="inst._id"
+        id="box"
+      >
+        <h2>Instituição {{ index + 1 }}</h2>
 
-      <div class="info">
-        <p><strong>Nome:</strong> {{ cadastro.nome }}</p>
-        <p><strong>Email:</strong> {{ cadastro.email }}</p>
-        <p><strong>Telefone:</strong> {{ cadastro.telefone }}</p>
-        <p><strong>Motivo do Cadastro:</strong> {{ cadastro.motivo }}</p>
+        <div class="info">
+          <p><strong>Nome da Instituição:</strong> {{ inst.nome_da_instituicao }}</p>
+          <p><strong>Responsável:</strong> {{ inst.Responsavel }}</p>
+          <p><strong>Email:</strong> {{ inst.email }}</p>
+          <p><strong>Telefone:</strong> {{ inst.tel }}</p>
+          <p><strong>CNPJ:</strong> {{ inst.Cnpj }}</p>
+          <p><strong>Área de Atuação:</strong> {{ inst.Area_de_atuacao }}</p>
+        </div>
+
+        <div class="botoes">
+          <button id="bot1" @click="atualizarStatus(inst._id, 'aceito')">Aceitar</button>
+          <button id="bot2" @click="atualizarStatus(inst._id, 'rejeitado')">Recusar</button>
+        </div>
       </div>
+    </div>
 
-      <div class="comentario">
-        <label for="comentario">Comentário do avaliador (opcional):</label>
-        <textarea
-          v-model="comentario"
-          id="comentario"
-          rows="3"
-        ></textarea>
-      </div>
-
-      <div class="botoes">
-        <button id="bot1" @click="aceitarCadastro">Aceitar</button>
-        <button id="bot2" @click="recusarCadastro">Recusar</button>
-      </div>
+    <div v-else class="mensagem-final">
+      <p>Nenhuma instituição pendente para análise.</p>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
-  name: 'AnaliseCadastro',
-  props: {
-    cadastro: {
-      type: Object,
-      required: true,
-      default: () => ({
-        nome: 'João da Silva',
-        email: 'joao@email.com',
-        telefone: '(11) 91234-5678',
-        motivo: 'Deseja ser voluntário em ações sociais.'
-      })
-    }
-  },
+  name: 'AnaliseInstituicoes',
   data() {
     return {
-      comentario: ''
+      instituicoesPendentes: []
     }
   },
+  mounted() {
+    this.carregarInstituicoes()
+  },
   methods: {
-    aceitarCadastro() {
-      console.log('Cadastro aceito!', this.cadastro, this.comentario);
+    async carregarInstituicoes() {
+      try {
+        const res = await axios.get('http://localhost:2500/Intituicoes')
+        this.instituicoesPendentes = res.data.filter(i => i.status === 'pendente')
+      } catch (err) {
+        console.error('Erro ao buscar instituições:', err)
+      }
     },
-    recusarCadastro() {
-      console.log('Cadastro recusado!', this.cadastro, this.comentario);
+
+    async atualizarStatus(id, status) {
+      try {
+        await axios.patch(
+          `http://localhost:2500/inscricoes/instituicoes/pendentes/${id}`,
+          { status }
+        )
+        // Remove da lista após ação
+        this.instituicoesPendentes =
+          this.instituicoesPendentes.filter(i => i._id !== id)
+      } catch (err) {
+        console.error('Erro ao atualizar status:', err)
+      }
     }
   }
 }
@@ -70,6 +82,7 @@ export default {
 .analise-page {
   font-family: Arial, sans-serif;
   background-color: #f0f2f5;
+  min-height: 100vh;
   padding: 30px;
 }
 
@@ -77,7 +90,7 @@ export default {
   background-color: #165692;
   color: white;
   text-align: center;
-  padding: 15px 0 ;
+  padding: 15px 0;
   margin-bottom: 25px;
   font-size: 24px;
 }
@@ -87,10 +100,11 @@ export default {
   padding: 24px;
   border: 7px solid black;
   border-radius: 15px;
-  max-width: 500px;
-  margin-right: auto;
+  max-width: 600px;
+  margin: 0 auto 25px auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 #box > h2 {
   text-align: center;
   font-size: 22px;
@@ -99,8 +113,8 @@ export default {
 }
 
 .info p {
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-bottom: 8px;
+  font-size: 15px;
 }
 
 .comentario {
@@ -148,7 +162,6 @@ button {
 #bot1 {
   background-color: #28a745;
 }
-
 #bot1:hover {
   background-color: #084d22;
 }
@@ -156,8 +169,14 @@ button {
 #bot2 {
   background-color: #dc3545;
 }
-
 #bot2:hover {
   background-color: #8d1b27;
+}
+
+.mensagem-final {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-top: 50px;
 }
 </style>

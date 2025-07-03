@@ -1,60 +1,72 @@
 <template>
   <div class="analise-page">
-    <h1 class="desta">Análise de Voluntarios</h1>
+    <h1 class="desta">Análise de Voluntários</h1>
 
-    <div id="box">
-      <h2>Análise de Cadastro</h2>
+    <div v-if="voluntariosPendentes.length > 0">
+      <div
+        v-for="(cadastro, index) in voluntariosPendentes"
+        :key="cadastro._id"
+        id="box"
+      >
+        <h2>Cadastro {{ index + 1 }}</h2>
 
-      <div class="info">
-        <p><strong>Nome:</strong> {{ cadastro.nome }}</p>
-        <p><strong>Email:</strong> {{ cadastro.email }}</p>
-        <p><strong>Telefone:</strong> {{ cadastro.telefone }}</p>
-        <p><strong>Motivo do Cadastro:</strong> {{ cadastro.motivo }}</p>
+        <div class="info">
+          <p><strong>Nome:</strong> {{ cadastro.nome }} {{ cadastro.sobrenome }}</p>
+          <p><strong>Email:</strong> {{ cadastro.email }}</p>
+          <p><strong>Data de Nascimento:</strong> {{ cadastro.Data_de_Nascimento }}</p>
+          <p><strong>Telefone:</strong> {{ cadastro.telefone }}</p>
+          <p><strong>CPF:</strong> {{ cadastro.CPF }}</p>
+          <p><strong>Gênero:</strong> {{ cadastro.Genero }}</p>
+          <p><strong>Escolaridade:</strong> {{ cadastro.escolaridade }}</p>
+          <p><strong>Curso:</strong> {{ cadastro.curso }}</p>
+          <p><strong>Dias disponíveis:</strong> {{ cadastro.disponibilidade?.dias?.join(', ') }}</p>
+          <p><strong>Horários disponíveis:</strong> {{ cadastro.disponibilidade?.horarios?.join(', ') }}</p>
+        </div>
+
+        <div class="botoes">
+          <button id="bot1" @click="atualizarStatus(cadastro._id, 'aceito')">Aceitar</button>
+          <button id="bot2" @click="atualizarStatus(cadastro._id, 'rejeitado')">Recusar</button>
+        </div>
       </div>
+    </div>
 
-      <div class="comentario">
-        <label for="comentario">Comentário do avaliador (opcional):</label>
-        <textarea
-          v-model="comentario"
-          id="comentario"
-          rows="3"
-        ></textarea>
-      </div>
-
-      <div class="botoes">
-        <button id="bot1" @click="aceitarCadastro">Aceitar</button>
-        <button id="bot2" @click="recusarCadastro">Recusar</button>
-      </div>
+    <div v-else class="mensagem-final">
+      <p>Nenhum voluntário pendente para análise.</p>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'AnaliseCadastro',
-  props: {
-    cadastro: {
-      type: Object,
-      required: true,
-      default: () => ({
-        nome: 'João da Silva',
-        email: 'joao@email.com',
-        telefone: '(11) 91234-5678',
-        motivo: 'Deseja ser voluntário em ações sociais.'
-      })
-    }
-  },
   data() {
     return {
-      comentario: ''
+      voluntariosPendentes: []
     }
   },
+  mounted() {
+    this.carregarVoluntarios()
+  },
   methods: {
-    aceitarCadastro() {
-      console.log('Cadastro aceito!', this.cadastro, this.comentario);
+    async carregarVoluntarios() {
+      try {
+        const response = await axios.get('http://localhost:2500/Volutarios')
+        this.voluntariosPendentes = response.data.filter(v => v.status === 'pendente')
+      } catch (error) {
+        console.error('Erro ao buscar voluntários:', error)
+      }
     },
-    recusarCadastro() {
-      console.log('Cadastro recusado!', this.cadastro, this.comentario);
+
+    async atualizarStatus(id, status) {
+      try {
+       await axios.patch(`http://localhost:2500/inscricoes/voluntarios/pendentes/${id}`, { status })
+
+        this.voluntariosPendentes = this.voluntariosPendentes.filter(v => v._id !== id)
+      } catch (error) {
+        console.error(`Erro ao atualizar status do volutario:`, error)
+      }
     }
   }
 }
@@ -88,8 +100,8 @@ export default {
   padding: 24px;
   border: 7px solid black;
   border-radius: 15px;
-  max-width: 500px;
-  margin-right: auto;
+  max-width: 600px;
+  margin: 0 auto 25px auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -101,8 +113,8 @@ export default {
 }
 
 .info p {
-  margin-bottom: 10px;
-  font-size: 16px;
+  margin-bottom: 8px;
+  font-size: 15px;
 }
 
 .comentario {
@@ -161,5 +173,12 @@ button {
 
 #bot2:hover {
   background-color: #8d1b27;
+}
+
+.mensagem-final {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-top: 50px;
 }
 </style>

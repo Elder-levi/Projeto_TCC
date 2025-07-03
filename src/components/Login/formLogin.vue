@@ -2,20 +2,51 @@
 <body>
   <div class="login-container">
     <h2>Entrar</h2>
-    <form>
+    <form @submit.prevent="fazerLogin">
       <div class="form-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="Digite seu e-mail" required />
+        <label for="email">Login</label>
+        <input v-model="Login" type="text" id="email" placeholder="Digite seu Login" required />
       </div>
       <div class="form-group">
         <label for="password">Senha</label>
-        <input type="password" id="password" placeholder="Digite sua senha" required />
+        <input v-model="Senha" type="password" id="password" placeholder="Digite sua senha" required />
       </div>
       <button type="submit">Login</button>
     </form>
   </div>
 </body>
 </template>
+
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+import axios from 'axios';
+
+const Login = ref('');
+const Senha = ref('');
+const router = useRouter()
+
+const fazerLogin = async () => {
+  try {
+    const response = await axios.post('http://localhost:2500/login', {
+      login: Login.value,
+      senha: Senha.value,
+    });
+
+    console.log('Login bem-sucedido!', response.data);
+
+    // Salvar token localmente (se o backend retornar um)
+    if (response.data.token) {
+      localStorage.setItem('token', response.data.token);
+    }
+        router.push('/ListInstituicoes'); 
+
+  } catch (error) {
+    console.error('Erro ao fazer login:', error.response?.data || error.message);
+    alert('Login ou senha inválidos!');
+  }
+};
+</script>
  <style scoped>
     * {
       box-sizing: border-box;
@@ -56,7 +87,7 @@
       color: #555;
     }
 
-    input[type="email"],
+    input[type="text"],
     input[type="password"] {
       width: 100%;
       padding: 0.75rem;

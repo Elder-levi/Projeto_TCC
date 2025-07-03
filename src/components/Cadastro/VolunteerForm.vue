@@ -41,7 +41,8 @@
           </template>
 
         
-          <InstitutionInfo v-if="selectedForm === 'instituicao'" />
+          <InstitutionInfo v-if="selectedForm === 'instituicao'"
+           @Enviar="enviarTudo"  />
         </div>
       </div>
     </div>
@@ -62,6 +63,9 @@ const currentStep = ref(1)
 const personalData = ref({})
 const availabilityData = ref({})
 const academicData = ref({})
+const institutionData = ref({})
+
+  
 
 function nextStep(data) {
   if (currentStep.value === 1) {
@@ -77,16 +81,30 @@ function prevStep() {
   currentStep.value--
 }
 
-function enviarTudo(dataFinal) {
-  academicData.value = dataFinal
+async function enviarTudo(dataFinal) {
+  try {
+    if (selectedForm.value === 'voluntario') {
+      academicData.value = dataFinal
+      const dadosCompletos = {
+        ...personalData.value,
+        ...availabilityData.value,
+        ...academicData.value
+      }
+      const response = await axios.post('http://localhost:2500/cadastro/Volutario', dadosCompletos)
+      console.log('Voluntário cadastrado:', response.data)
 
-  const dadosCompletos = {
-    ...personalData.value,
-    ...availabilityData.value,
-    ...academicData.value
+    } else if (selectedForm.value === 'instituicao') {
+      institutionData.value = { ...institutionData.value, ...dataFinal }
+     const response = await axios.post('http://localhost:2500/cadastro/Inst', dataFinal)
+      console.log('Instituição cadastrada:', response.data)
+    }
+    // Resetar ou mostrar mensagem de sucesso se quiser
+    currentStep.value = 1
+
+  } catch (error) {
+    console.error('Erro ao enviar os dados:', error)
   }
 }
-
 
 </script>
 

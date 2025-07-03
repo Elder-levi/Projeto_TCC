@@ -1,26 +1,25 @@
 <template>
-
- <div>
-  <Inst/>
-  <Lisvol/>
- </div>
-
+  <div>
+    <Inst />
+    <Lisvol />
+  </div>
 </template>
-<script >
-import Inst from './instituicoes.vue'
-import Lisvol from './ListVolu.vue'
 
-export default {
-    name: 'UniList',
-     components:{
-       Inst,
-       Lisvol
-    }
-}
+<script setup>
+import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
+import Inst from './instituicoes.vue';
+import Lisvol from './ListVolu.vue';
 
+const router = useRouter();
 
-
-
+onMounted(() => {
+  const token = localStorage.getItem('token');
+  if (!token) {
+    alert('Você precisa estar logado para acessar esta página.');
+    router.push('/login'); 
+  }
+});
 </script>
 
 <style>
