@@ -53,36 +53,53 @@
   
   <style scoped>
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-  p {
-    margin: 0.25rem 0;
-  }
-  body{
-    display: flex;
-    flex-direction: column;
-  }
-
-  .container {
-
-  display: grid;
-  grid-template-columns: 1fr 2fr 3fr;
-  gap: 6em;
-  margin: 6rem auto;
+p {
+  margin: 0.25rem 0;
 }
 
-  section {
-    background-color: #165692;
-    width: 100%;
-    height: 71vw;
-    font-size: 30px;
+section {
+  background-color: #165692;
+  width: 100%;
+  min-height: 400px;  /* altura mínima confortável */
+  font-size: 1.875rem; /* 30px */
+  padding: 3rem 1rem;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
-  FaleConosco {
-    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
+}
+
+faleConosco {
+  margin-top: 2rem;
+  display: block;
+}
+
   </style>
   

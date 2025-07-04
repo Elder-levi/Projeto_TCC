@@ -64,46 +64,75 @@
   </script>
   
   <style scoped>
+section {
+  margin: 0;
+  background-color: #165692;
+  width: 100%;
+  height: 100vh;            /* ocupa toda a altura da tela */
+  display: flex;
+  justify-content: center;  /* centraliza horizontalmente */
+  align-items: center;      /* centraliza verticalmente */
+  padding: 20px;            /* espaçamento interno */
+  box-sizing: border-box;
+}
 
-  section{
-      margin: 0%;
-    background-color: #165692;
-   height: 71vw;
+section.duvidas .principaisduvidas {
+  max-width: 1000px;
+  width: 100%;
+  color: #ffffff;
+  overflow-y: auto;         /* permite rolagem se conteúdo for maior */
+  max-height: 90vh;         /* limita altura para o conteúdo não ultrapassar */
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: rgba(21, 86, 146, 0.85); /* leve fundo para destacar */
+}
+
+/* Ajustes de fontes e espaçamentos */
+section.duvidas .titulo h1 {
+  font-weight: 500;
+  font-size: 2.8rem;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+section.duvidas details {
+  margin-bottom: 20px;
+  background-color: rgba(255,255,255,0.1);
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+section.duvidas details[open] {
+  background-color: rgba(255,255,255,0.2);
+}
+
+section.duvidas summary {
+  font-size: 1.3rem;
+}
+
+section.duvidas p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  section.duvidas .titulo h1 {
+    font-size: 2rem;
   }
 
-  section.duvidas .principaisduvidas{
-    padding: 200px 10% 200px;
-}
+  section.duvidas summary {
+    font-size: 1.1rem;
+  }
 
-section.duvidas .titulo h1{
-    font-weight: 500;
-    font-size: 50px;
-    color: #ffffff;
-}
-
-p , summary{
-font-size:  25px;
-
-}
-
-details{
-    margin-bottom: 30px;
-}
-
-h1{
-    margin-bottom: 70px;
-}
-section.duvidas .groupInputs .line{
-    width: 800px;
-    height: 0.08px;
-    text-align: center;
-    background-color: #000000;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-section.duvidas details{
-    color: #ffffff;
+  section.duvidas p {
+    font-size: 1rem;
+  }
 }
 
   </style>

@@ -2,9 +2,11 @@
 <footer>
         <div class="container">
             <div class="logofooter">
+               <div class="logofooter">
                  <router-link to="/formsLog">
                     <img src="../imagens/Logo4.png">
                 </router-link>
+            </div>
             </div>
             <nav>
                 <ul>
@@ -138,5 +140,12 @@ footer i{
 footer p{
     color: #ffffffa6;
     font-size: 12px;
+}
+
+footer .linha {
+  width: 90%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.15);
+  margin: 20px 0;
 }
 </style>

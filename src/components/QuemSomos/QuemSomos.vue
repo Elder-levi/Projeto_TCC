@@ -47,84 +47,86 @@ section.quemsomos {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
-  padding: 0 10%;
-  padding-top: 11em;
-  margin: 0 ;
+  padding: 5% 10% 5% 10%;
+  margin: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #165692;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-content: flex-start;
-    margin: 0;
-    padding: 0;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  margin: 0;
+  padding: 0;
 }
 
-section.quemsomos .icones{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    font-size: 30px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: 0.5s ease-in-out;
+section.quemsomos .icones {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 30px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-section.quemsomos #instagram{
-    transition: 0.5s ease-in-out;
+section.quemsomos .icones i:hover {
+  color: #165692;
 }
 
-section.quemsomos #instagram:hover{
-    color: #165692;
+section.quemsomos .text {
+  color: #ffffff;
+  font-size: 20px;
 }
 
-section.quemsomos #twitter{
-    transition: 0.5s ease-in-out;
+section.quemsomos .text p {
+  margin-top: 40px;
+  font-size: 2rem; /* 35px aproximado */
+  line-height: 1.4;
 }
 
-section.quemsomos #twitter:hover{
-    color: #165692;
+section.quemsomos .line {
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 30px 0;
 }
 
-section.quemsomos #facebook{
-    transition: 0.5s ease-in-out;
+.titulo > h1 {
+  font-size: 3.75rem; /* 60px aproximado */
+  text-align: left;
+  margin: 0;
 }
 
-section.quemsomos #facebook:hover{
-    color: #165692;
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  section.quemsomos {
+    padding: 5% 5% 5% 5%;
+  }
+
+  section.quemsomos .icones {
+    width: 80%;
+    font-size: 24px;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+
+  section.quemsomos .text p {
+    font-size: 1.2rem; /* menor texto em celulares */
+    margin-top: 20px;
+  }
+
+  .titulo > h1 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
 }
 
-section.quemsomos #whatsapp{
-    transition: 0.5s ease-in-out;
-}
-
-section.quemsomos #whatsapp:hover{
-    color: #165692;
-}
-
-section.quemsomos .text{
-    color: #ffffff;
-    font-size: 20px;
-}
-
-section.quemsomos .text p{
-    margin-top: 40px;
-    font-size: 35px ;
-}
-
-section.quemsomos .line{
-    width: 100%;
-    height: 0.08px;
-    background-color: #ffffff;
-}
-
-.titulo > h1{
-    font-size: 60px;
-    text-align: left;
-}
 </style>

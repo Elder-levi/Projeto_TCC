@@ -6,6 +6,7 @@
     <input v-model="tel" type="number" placeholder="Telefone com DDD" />
     <input v-model="Cnpj" type="number" placeholder="CNPJ" />
     <input v-model="Area_de_atuacao" type="text" placeholder="Área de atuação" />
+    <textarea v-model="descricao" placeholder="Sobre" ></textarea>
     <button @click="enviarDados">Enviar</button>
   </div>
 </template>
@@ -21,6 +22,7 @@ const Responsavel = ref('')
 const email = ref('')
 const tel = ref('')
 const Cnpj = ref('')
+const descricao = ref('')
 const Area_de_atuacao = ref('')
 
 function enviarDados() {
@@ -30,6 +32,7 @@ function enviarDados() {
     email: email.value,
     tel: tel.value,
     Cnpj: Cnpj.value,
+    descricao: descricao.value,
     Area_de_atuacao: Area_de_atuacao.value
   }
 
@@ -52,5 +55,13 @@ button {
   color: white;
   border: none;
   cursor: pointer;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 </style>

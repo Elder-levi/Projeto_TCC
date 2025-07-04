@@ -63,36 +63,34 @@ export default{
 }
 </script>
 <style scoped>
-
-
-img{
-    color:#ffffff;
-    border-radius: 200px;
+img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
-section{
-  
-    background:  #165692;
-    margin: 0%;
+section {
+  background: #165692;
+  margin: 0;
+  padding: 2rem 1rem;
 }
 
-
-section.final .container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #ffffff;
+section.final .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
 }
 
-section.final .titulofinal{
-    color: #ffffff;
-    font-size: 25px;
-    margin-top: 40px;
-    margin-bottom: 0;
+section.final .titulofinal {
+  font-size: 25px;
+  margin: 40px 0 0 0;
+  text-align: center;
 }
 
-section.final h1{
-    margin: 0;
+section.final h1 {
+  margin: 0;
 }
 
 section.final .textfinal{
@@ -102,42 +100,72 @@ section.final .textfinal{
     text-align: center;
 }
 
-section.final .diferenciais{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+section.final .diferenciais {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
 }
 
-section.final .container2{
-    margin-top: 70px;
-    display: flex;
-    background-color: #ffffff;
-    width: 280px;
-    height: 300px;
-    justify-content: center;
-    border-radius: 25px;
-    padding-top: 20px;
-    flex-direction: column;
-    text-align: center;
-    font-size: 14px;
-    color: #113455;
+section.final .absolute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 280px;
 }
 
-section.final p{
-    margin: 0;
+section.final .icon {
+  font-size: 85px;
+  background-color: #292636;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -60px;
+  z-index: 1;
 }
 
-section.final .icon{
-    font-size: 85px;
-    align-items: center;
-    text-align: center;
-    background-color: #292636;
-    border-radius: 50%;
-    width: 135px;
-    height: 135px;
-    position: absolute;
-    margin-left: 72px;
-    color: #ffffff;
+section.final .container2 {
+  background-color: #ffffff;
+  width: 100%;
+  height: 300px;
+  border-radius: 25px;
+  padding: 80px 20px 20px 20px; /* espaço para o ícone sobreposto */
+  text-align: center;
+  font-size: 14px;
+  color: #113455;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section.final p {
+  margin: 0;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 480px) {
+  section.final .textfinal {
+    font-size: 16px;
+  }
+
+  section.final .container2 {
+    height: auto;
+    padding-top: 100px;
+  }
+
+  section.final .icon {
+    width: 100px;
+    height: 100px;
+    font-size: 60px;
+    margin-bottom: -50px;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 </style>

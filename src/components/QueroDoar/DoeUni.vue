@@ -43,21 +43,31 @@ section {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100svh;
+  min-height: 100svh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; 
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .container {
   background-color: rgba(255, 255, 255, 0.8);
   width: 50svh;
+   max-width: 50svh;
   height: auto;
   border-radius: 20px;
   margin-left: 2rem; 
   margin-top: 2rem;   
+  padding: 1rem;
+  box-sizing: border-box;
 }
-
+@media (max-width: 360px) {
+  .container {
+    padding: 0.8rem;
+    border-radius: 12px;
+  }
+}
 </style>

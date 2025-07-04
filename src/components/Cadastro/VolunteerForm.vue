@@ -84,6 +84,7 @@ function prevStep() {
 async function enviarTudo(dataFinal) {
   try {
     if (selectedForm.value === 'voluntario') {
+      alert('Voluntário cadastrado com sucesso!')
       academicData.value = dataFinal
       const dadosCompletos = {
         ...personalData.value,
@@ -94,6 +95,7 @@ async function enviarTudo(dataFinal) {
       console.log('Voluntário cadastrado:', response.data)
 
     } else if (selectedForm.value === 'instituicao') {
+      alert('Instituição cadastrada com sucesso!')
       institutionData.value = { ...institutionData.value, ...dataFinal }
      const response = await axios.post('http://localhost:2500/cadastro/Inst', dataFinal)
       console.log('Instituição cadastrada:', response.data)

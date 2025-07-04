@@ -7,6 +7,7 @@ import SejaVol from '@/components/Cadastro/VolunteerForm.vue'
 import QueroDoar from '@/components/QueroDoar/DoeUni.vue'
 import Login from '@/components/Login/formLogin.vue'
 import Uniinsti from '@/components/Listagem/UniLIst.vue'
+import DoacaoDy from '@/components/QueroDoar/formsInicio/DoacaoDynamica.vue'
 
 const routes = [
   {path: '/' , name: 'Inicio' , component: Home,},
@@ -17,6 +18,9 @@ const routes = [
   {path: '/QueroDoar' , name: 'QueroDoar' , component: QueroDoar,},
   {path: '/formsLog' , name: 'Login' , component: Login,},
   {path: '/ListInstituicoes' , name: 'Uniinsti' , component: Uniinsti,},
+  {path: '/querodoar/:instituicao' , name: 'DoacaoDy' , component: DoacaoDy,
+  props: true 
+  },
 
 ]
  // Testes
